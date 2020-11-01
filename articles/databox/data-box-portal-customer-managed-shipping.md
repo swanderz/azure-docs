@@ -2,13 +2,13 @@
 title: Microsoft Azure Data Box self-managed shipping | Microsoft Docs in data 
 description: Describes self-managed shipping workflow for Azure Data Box devices
 services: databox
-author: priestlg
+author: alkohli
 
 ms.service: databox
 ms.subservice: disk
-ms.topic: conceptual
-ms.date: 05/20/2020
-ms.author: v-grpr
+ms.topic: how-to
+ms.date: 08/12/2020
+ms.author: alkohli
 ---
 
 # Use self-managed shipping for Azure Data Box in the Azure portal
@@ -24,6 +24,8 @@ Self-managed shipping is available as an option when you [Order Azure Data Box](
 * Japan
 * Singapore
 * South Korea
+* India
+* South Africa
 
 ## Use self-managed shipping
 
@@ -35,9 +37,9 @@ When you place a Data Box order, you can choose self-managed shipping option.
 2. When choosing shipping type, select the **Self-managed shipping** option. This option is only available if you are in a supported region as described in the prerequisites.
 
 3. Once you have provided your shipping address, you will need to validate it and complete your order.
-   ![Self-managed shipping](media\data-box-portal-customer-managed-shipping\choose-self-managed-shipping-2.png)
+   ![Self-managed shipping 2](media\data-box-portal-customer-managed-shipping\choose-self-managed-shipping-2.png)
 
-4. Once the device has been prepared, you can schedule a pickup.
+4. Once the device has been prepared and you receive an email notification for it, you can schedule a pickup.
 
    In your Azure Data Box order, go to **Overview** and then select **Schedule pickup**.
 
@@ -53,7 +55,7 @@ When you place a Data Box order, you can choose self-managed shipping option.
 
    ![Viewing your authorization code](media\data-box-portal-customer-managed-shipping\data-box-portal-auth-01b.png)
 
-   Make a note of this **Authorization code**. As per the security requirements, at the time of scheduling pick-up and drop off, it is necessary to present the name of the person who would arrive for pick-up and drop off.
+   Make a note of this **Authorization code**. As per the security requirements, at the time of scheduling pick-up, it is necessary to present the name of the person who would arrive for pick-up.
 
    You also need to provide details of who will be going to the datacenter for pickup. You or the point of contact must carry a Government approved photo ID that will be validated at the datacenter.
 
@@ -72,7 +74,7 @@ When you place a Data Box order, you can choose self-managed shipping option.
 
 9. If you have received an appointment for drop off, the order should be at **Ready to receive at Azure datacenter** state in the Azure portal. Follow the instructions under **Schedule drop-off** to return the device.
 
-   ![Viewing your authorization code](media\data-box-portal-customer-managed-shipping\data-box-portal-received-complete-02b.png)
+   ![Viewing your authorization code 2](media\data-box-portal-customer-managed-shipping\data-box-portal-received-complete-02b.png)
 
 10. After your ID and authorization code are verified and you have dropped off the device at the datacenter, the order status should be **Received**.
 

@@ -1,13 +1,13 @@
 ---
 title: Device development for Azure IoT Central | Microsoft Docs
-description: Azure IoT Central is an IoT application platform that simplifies the creation of IoT solutions. This article provides an overview of developing devices to connect to your IoT Central application.
+description: Azure IoT Central is an IoT application platform that simplifies the creation of IoT solutions. This article provides an overview of developing devices to connect to your IoT Central application. Devices use telemetry to send streaming data and properties to report device state. Iot Central can set device state using writable properties and call commands on a device.
 author: dominicbetts
 ms.author: dobett
 ms.date: 05/05/2020
 ms.topic: overview
 ms.service: iot-central
 services: iot-central
-ms.custom: mvc
+ms.custom: [mvc, device-developer]
 ---
 
 # IoT Central device development overview
@@ -19,7 +19,7 @@ An IoT Central application lets you monitor and manage millions of devices throu
 Devices interact with an IoT Central application using the following primitives:
 
 - _Telemetry_ is data that a device sends to IoT Central. For example, a stream of temperature values from an onboard sensor.
-- _Properties_ are state values that a device reports to IoT Central. For example, the current firmware version of the device. You can also have writable properties that IoT Central can update on the device.
+- _Properties_ are state values that a device reports to IoT Central. For example, the current firmware version of the device. You can also have writable properties that IoT Central can update on the device such as a target temperature.
 - _Commands_ are called from IoT Central to control the behavior a device. For example, your IoT Central application might call a command to reboot a device.
 
 A solution builder is responsible for configuring dashboards and views in the IoT Central web UI to visualize telemetry, manage properties, and call commands.
@@ -80,7 +80,9 @@ Use one of the [Azure IoT device SDKs](#languages-and-sdks) to implement the beh
 - Synchronize property values between the device and IoT Central. The device template specifies the property names and data types so that IoT Central can display the information.
 - Implement command handlers for the commands specifies in the device template. The device template specifies the command names and parameters that the device should use.
 
-For more information, see [Create and connect a Node.js client application](./tutorial-connect-device-nodejs.md) or [Create and connect a Python client application](./tutorial-connect-device-python.md).
+For more information about the role of device templates, see [What are device templates?](./concepts-device-templates.md).
+
+For some sample code, see [Create and connect a Node.js client application](./tutorial-connect-device-nodejs.md) or [Create and connect a Python client application](./tutorial-connect-device-python.md).
 
 ### Languages and SDKs
 

@@ -1,7 +1,7 @@
 ---
 title: "Quickstart: Check spelling with the REST API and Java - Bing Spell Check"
 titleSuffix: Azure Cognitive Services
-description: Get started using the Bing Spell Check REST API to check spelling and grammar.
+description: Get started using the Bing Spell Check REST API and Java to check spelling and grammar.
 services: cognitive-services
 author: aahill
 manager: nitinme
@@ -10,10 +10,16 @@ ms.service: cognitive-services
 ms.subservice: bing-spell-check
 ms.topic: quickstart
 ms.date: 05/21/2020
+ms.custom: devx-track-java
 ms.author: aahi
 ---
 
 # Quickstart: Check spelling with the Bing Spell Check REST API and Java
+
+> [!WARNING]
+> Bing Search APIs are moving from Cognitive Services to Bing Search Services. Starting **October 30, 2020**, any new instances of Bing Search need to be provisioned following the process documented [here](https://aka.ms/cogsvcs/bingmove).
+> Bing Search APIs provisioned using Cognitive Services will be supported for the next three years or until the end of your Enterprise Agreement, whichever happens first.
+> For migration instructions, see [Bing Search Services](https://aka.ms/cogsvcs/bingmigration).
 
 Use this quickstart to make your first call to the Bing Spell Check REST API. This simple Java application sends a request to the API and returns a list of suggested corrections. 
 
@@ -55,9 +61,9 @@ Although this application is written in Java, the API is a RESTful web service c
 
 1. Create a function called `check()` to create and send the API request. Within this function, add the code specified in the next steps. Create a string for the request parameters:
 
-   a. Assign your market code to the `mkt` parameter with the `=` operator. 
+   1. Assign your market code to the `mkt` parameter with the `=` operator. 
 
-   b. Add the `mode` parameter with the `&` operator, and then assign the spell-check mode. 
+   1. Add the `mode` parameter with the `&` operator, and then assign the spell-check mode. 
 
    ```java
    public static void check () throws Exception {

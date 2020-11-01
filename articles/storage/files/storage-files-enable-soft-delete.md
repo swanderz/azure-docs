@@ -3,8 +3,8 @@ title: Enable soft delete - Azure file shares
 description: Learn how to enable soft delete on Azure file shares for data recovery and preventing accidental deletion.
 author: roygara
 ms.service: storage
-ms.topic: conceptual
-ms.date: 05/26/2020
+ms.topic: how-to
+ms.date: 05/28/2020
 ms.author: rogarana
 ms.subservice: files
 services: storage
@@ -18,6 +18,8 @@ The following sections show how to enable and use soft delete for Azure file sha
 
 # [Portal](#tab/azure-portal)
 
+## Getting started
+
 1. Sign into the [Azure portal](https://portal.azure.com/).
 1. Navigate to your storage account and select **Soft delete** under **File service**.
 1. Select **Enabled** for **file share soft delete**.
@@ -27,6 +29,12 @@ The following sections show how to enable and use soft delete for Azure file sha
 :::image type="content" source="media/storage-how-to-recover-deleted-account/enable-soft-delete-files.png" alt-text="Screenshot of the storage account soft delete settings pane. Highlighting the file shares section, enable toggle, set a retention period, and save. This will enable soft delete for all file shares in your storage account.":::
 
 # [PowerShell](#tab/azure-powershell)
+
+## Prerequisite
+
+Soft delete cmdlets are available in the [3.0.0](https://www.powershellgallery.com/packages/Az.Storage/3.0.0) version of the Az.Storage module. 
+
+## Getting started with PowerShell
 
 To enable soft delete, you must update a file client's service properties. The following example enables soft delete for all file shares in a storage account:
 
@@ -65,7 +73,7 @@ To restore a soft deleted file share:
 
 # [PowerShell](#tab/azure-powershell)
 
-To restore a soft deleted file share, use the following command:
+Soft delete cmdlets are available in the 3.0.0 version of the Az.Storage module. To restore a soft deleted file share, use the following command:
 
 ```azurepowershell-interactive
 Restore-AzRmStorageShare -ResourceGroupName $rgname -StorageAccountName $accountName -DeletedShareVersion 01D5E2783BDCDA97
@@ -86,9 +94,13 @@ If you wish to stop using soft delete, or permanently delete a file share, follo
 
 # [PowerShell](#tab/azure-powershell)
 
-You can use the following command to disable soft delete on your storage account:
+Soft delete cmdlets are available in the 3.0.0 version of the Az.Storage module. You can use the following command to disable soft delete on your storage account:
 
 ```azurepowershell-interactive
 Update-AzStorageFileServiceProperty -ResourceGroupName $rgName -StorageAccountName $accountName -EnableShareDeleteRetentionPolicy $false
 ```
 ---
+
+## Next steps
+
+To learn about another form of data protection and recovery, see our article [Overview of share snapshots for Azure Files](storage-snapshots-files.md).
